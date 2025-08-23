@@ -25,5 +25,5 @@ while True:
         break
 
     # safe computation
-    result = (a + b) % c
+    result = c**2 == a**2 + b**2
     print(result)
