@@ -1,8 +1,10 @@
-# Pythagorean theorem - Right Angle Triangle Check. 
+
+"""Pythagorean theorem - Right Angle Triangle Check module.
+Reads input, validates, and checks for right triangles."""
 
 while True:
     line = input()
-    
+
     # split and validate number of elements
     parts = line.split()
     if len(parts) != 3:
@@ -10,7 +12,8 @@ while True:
         continue
 
     try:
-        a, b, c = map(int, parts)
+        # sort and map to int inside try block to catch all errors
+        a, b, c = sorted(map(int, parts))
     except ValueError:
         print("⚠️ Bad input: must be integers. Skipping...")
         continue
@@ -25,5 +28,7 @@ while True:
         break
 
     # safe computation
-    result = c**2 == a**2 + b**2
-    print(result)
+    if c**2 == a**2 + b**2:
+        print("right")
+    else:
+        print("wrong")
