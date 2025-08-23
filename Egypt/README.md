@@ -19,6 +19,18 @@ The ancient Egyptians discovered that a triangle with sides of lengths 3, 4, and
   * Up to 1,000 test cases.
   * Side lengths are positive integers not exceeding 30,000.
 
+  ---
+
+  ## 🛠️ Developer Notes: How to Test `egypt.py`
+
+  To test the solution locally using the provided `test_input.txt` file, run the following command in PowerShell:
+
+  ```
+  Get-Content Egypt\test_input.txt | python Egypt\egypt.py
+  ```
+
+  This will feed the test cases from `test_input.txt` into your script and display the results in the terminal.
+
 ## ✅ Approach
 
 1. **Input Parsing:** Read each line of input until `0 0 0` is encountered.
