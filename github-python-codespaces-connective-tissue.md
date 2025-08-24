@@ -10,6 +10,13 @@ A quick, practical intro to the *why* behind the terminal, GitHub, and Python in
 - Commands are fast and reproducible. That reduces confusion in class.
 
 ---
+🔑 The Big Picture
+- Terminal: where you “talk” to your computer.
+- cd/ls/pwd: how you move around.
+- python file.py: how you run programs.
+- git pull → status → add → commit → push → status: the cycle of coding + saving + sharing.
+
+---
 
 ## 📂 Moving Around Folders
 You run commands *in the folder that holds your files*. Know where you are.
@@ -19,7 +26,7 @@ You run commands *in the folder that holds your files*. Know where you are.
 - `cd foldername` → 🚪 enter a folder.
 - `cd ..` → ⬆️ go up one level.
 
-Tip: your *working directory* is where `python` and `git` look by default.
+Tip: By default, GitHub Codespaces opens the terminal at the root of the repo. Your *working directory* is where `python` and `git` look by default.
 
 ---
 
@@ -48,15 +55,25 @@ In VS Code you’ll usually be in **bash** unless you start Python on purpose.
 ## 🗂️ Typical Project Shape
 Example:
 ```
-my-project/
-├─ README.md
-├─ .gitignore
-├─ requirements.txt      # packages to install
-├─ src/
-│  ├─ main.py
-│  └─ utils.py
-└─ tests/
-   └─ test_main.py
+CMU/                     # 👈 repo root (where Codespaces terminal starts)
+├─ README.md             # high-level notes or instructions
+├─ .gitignore            # tells Git what to skip
+├─ assignment1/          # first assignment lives here
+│  ├─ requirements.txt   # packages for this assignment
+│  ├─ src/
+│  │  ├─ main.py         # starting point of code
+│  │  └─ utils.py        # helper functions
+│  └─ tests/
+│     └─ test_main.py    # test file
+├─ assignment2/          # new assignment, same structure
+│  ├─ requirements.txt
+│  ├─ src/
+│  │  └─ main.py
+│  └─ tests/
+│     └─ test_main.py
+└─ assignment3/
+   └─ ...                # continues weekly
+
 ```
 You run from the project folder or `src` depending on how imports are set up.
 
